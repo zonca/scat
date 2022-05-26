@@ -1,0 +1,3 @@
+
+class = "Pipeline"
+steps = ["filters/datasetname/compute_squaredsum.toml", "filters/datasetname/filter_computedcol.toml"]

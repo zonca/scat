@@ -1,0 +1,3 @@
+
+class = "QueryFilter"
+query = "computed_col < 1"
