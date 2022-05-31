@@ -6,9 +6,8 @@ def dask_memory_usage_GB(dask_object):
 
 
 def dask_histogram(dask_dataframe, column, bins, bins_range):
-    h, bins = da.histogram(
+    histogram, bins = da.histogram(
         dask_dataframe[column].to_dask_array(), bins=bins, range=bins_range
     )
-    histogram = h.compute()
     centroids = bins[:-1] + (bins[1] - bins[0]) / 2
     return centroids, histogram
